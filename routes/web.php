@@ -16,19 +16,25 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/home', function () {
+    return view('home');
+});
+Route::get('/about', function () {
+    return view('about');
+}); 
 // closure
-Route::get('/profil', function () {
-    return "ini adalah profil siswa";
-});
-// route name
-Route::get('/tesname',function(){
-    return route('profil');
-});
-// parameter
-Route::get('/profil/{id}',function($id){
-    return $id;
-});
-// controller
-Route::get("testcontroller","TestController@show");
-// resource
-Route::resource("siswa","SiswaController");
+// Route::get('/profil', function () {
+//     return "ini adalah profil siswa";
+// });
+// // route name
+// Route::get('/tesname',function(){
+//     return route('profil');
+// });
+// // parameter
+// Route::get('/profil/{id}',function($id){
+//     return $id;
+// });
+// // controller
+// Route::get("testcontroller","TestController@show");
+// // resource
+// Route::resource("siswa","SiswaController");
